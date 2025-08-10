@@ -1,0 +1,12 @@
+streamlit
+requests
+beautifulsoup4
+pypdf
+python-dotenv
+sentence-transformers
+numpy
+tqdm
+# Optional backends (only install if you want them)
+chromadb        # optional: for Chroma vectorstore
+openai          # optional: for OpenAI LLM/embeddings
+langchain_groq  # optional: for Groq LLM (if you use it)
