@@ -37,108 +37,89 @@ This tool uses **GROQ LLM** with **LangChain** to provide **fast, accurate, and 
 
 ---
 
-## 📦 Installation
-
-### 1️⃣ Clone the repository
-```bash
+📦 Installation
+1️⃣ Clone the Repository
+bash
+Copy
+Edit
 git clone https://github.com/<your-username>/research-assistance-tool.git
 cd research-assistance-tool
-
-### 2️⃣ Create a virtual environment
+2️⃣ Create a Virtual Environment
 bash
 Copy
 Edit
 python -m venv venv
-source venv/bin/activate   # macOS/Linux
+source venv/bin/activate   # Linux / macOS
 venv\Scripts\activate      # Windows
-
-### 3️⃣ Install dependencies
+3️⃣ Install Dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-
-### 4️⃣ Add your environment variables
-Create a .env file in the root directory:
+⚙️ Environment Variables
+Create a .env file in the root directory and add:
 
 ini
 Copy
 Edit
 GROQ_API_KEY=your_groq_api_key_here
 ▶️ Usage
-Start the Streamlit app
+Run the Application
 bash
 Copy
 Edit
-streamlit run app.py
-Ingest a URL
-Paste the article/research paper URL into the input box
+python app.py
+Example Python Usage
+python
+Copy
+Edit
+from rag import ingest_pdf, ingest_url, answer_query
 
-Click Ingest
+# Ingest PDF
+ingest_pdf("sample.pdf")
 
-Data is processed, chunked, and stored in FAISS
+# Ingest URL
+ingest_url("https://example.com/article")
 
-Ingest a PDF
-Upload your PDF
-
-System extracts text, chunks it, and stores vectors
-
-Ask Questions
-Type your query in the input box
-
-The system retrieves the most relevant chunks
-
-GROQ LLM generates a precise answer
-
-### 📸 Example
-Question:
-
-What are the main findings from the latest AI research in the uploaded paper?
-
-Answer:
-
-The study concludes that integrating multimodal models with self-corrective feedback significantly improves reasoning accuracy, particularly in open-ended problem-solving scenarios.
-
-### 🧭 Project Structure
+# Ask a question
+response = answer_query("What is the main topic of the article?")
+print(response)
+📂 Project Structure
 bash
 Copy
 Edit
 research-assistance-tool/
 │
-├── app.py           # Streamlit UI
-├── rag.py           # Ingestion, storage, retrieval, Q&A
-├── requirements.txt # Dependencies
-├── .env.example     # Example env file
-└── README.md        # Documentation
+├── app.py             # Flask API entry point
+├── rag.py             # Core logic for ingestion & querying
+├── requirements.txt   # Python dependencies
+├── .env               # API keys (not tracked in git)
+└── README.md          # Project documentation
+📜 API Endpoints
+Method	Endpoint	Description
+POST	/ingest-pdf	Upload a PDF and store embeddings
+POST	/ingest-url	Ingest website content
+POST	/query	Ask a question to the knowledge DB
 
-### 🔮 Future Enhancements
-Multi-file batch ingestion
+🧠 How It Works
+Ingestion – The system extracts text from PDFs or URLs.
 
-Support for audio/video transcription
+Embedding – Text is converted into vector embeddings using LangChain.
 
-Integration with other LLMs (Claude, Gemini)
+Storage – FAISS stores these embeddings locally.
 
-User authentication & role-based access
+Querying – User queries are embedded and compared with stored vectors.
 
-Cloud-hosted vector store
+Answering – Groq LLM generates a contextual answer from the matched text.
 
-###  📜 License
-This project is licensed under the MIT License.
+🔮 Future Improvements
+Add support for DOCX ingestion
 
-### 💡 Acknowledgements
-LangChain
+Deploy as a web app with file upload & chat UI
 
-FAISS
+Add multi-language support
 
-GROQ
+Integration with Google Drive and Notion
 
-Streamlit
-
-yaml
-Copy
-Edit
-
----
-
-If you want, I can also **add real usage screenshots and architecture diagram** to make your GitHub repo stand out.  
-I can prepare those next so your README looks professional.
+📄 License
+This project is licensed under the MIT License – feel free to use and modify it.
