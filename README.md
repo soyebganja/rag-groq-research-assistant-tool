@@ -5,6 +5,7 @@ This tool uses **GROQ LLM** with **LangChain** to provide **fast, accurate, and 
 
 <img width="1284" height="690" alt="image" src="https://github.com/user-attachments/assets/0bbb0508-5942-447b-bdb7-9b2f10d89105" />
 
+**Live Demo Link**: [RAG-GROQ-Research-Assistant-Tool](https://rag-groq-research-assistant-tool-hvcyd5qpjwhsa2uki8yyo9.streamlit.app/)
 ---
 
 ## 🚀 Features
@@ -37,89 +38,131 @@ This tool uses **GROQ LLM** with **LangChain** to provide **fast, accurate, and 
 
 ---
 
-📦 Installation
-1️⃣ Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/<your-username>/research-assistance-tool.git
-cd research-assistance-tool
-2️⃣ Create a Virtual Environment
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate   # Linux / macOS
-venv\Scripts\activate      # Windows
-3️⃣ Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-⚙️ Environment Variables
-Create a .env file in the root directory and add:
+# LangChain + GROQ + Streamlit: LLM App
 
-ini
-Copy
-Edit
-GROQ_API_KEY=your_groq_api_key_here
-▶️ Usage
-Run the Application
-bash
-Copy
-Edit
-python app.py
-Example Python Usage
-python
-Copy
-Edit
-from rag import ingest_pdf, ingest_url, answer_query
+A simple yet powerful LLM (Large Language Model) app built with **LangChain**, **GROQ API**, and **Streamlit**. This project allows you to interact with LLMs using GROQ as the backend, all through a clean Streamlit web interface.
 
-# Ingest PDF
-ingest_pdf("sample.pdf")
+---
 
-# Ingest URL
-ingest_url("https://example.com/article")
+# GROQ RAG Application
 
-# Ask a question
-response = answer_query("What is the main topic of the article?")
-print(response)
-📂 Project Structure
-bash
-Copy
-Edit
-research-assistance-tool/
+A Retrieval-Augmented Generation (RAG) application powered by the **GROQ LLM** and **LangChain**, designed to enable ultra-fast, intelligent responses from your own knowledge base. This project uses **GROQ’s blazing-fast inference** and **vector search** to deliver accurate, context-aware answers.
+
+---
+
+## 🚀 Features
+
+- **GROQ LLM Integration** – Ultra-low latency responses using the GROQ API.
+- **LangChain Framework** – Manages the RAG pipeline for seamless retrieval + generation.
+- **PDF/Text Data Loading** – Upload and process your documents easily.
+- **FAISS / Chroma Vector Store** – For efficient embedding storage and semantic search.
+- **Streamlit Interface** – Simple, clean UI for interacting with the chatbot.
+- **Environment Variables** – API keys and configs stored securely via `.env`.
+
+---
+
+## 📂 Project Structure
+
+```
+groq-rag-app/
 │
-├── app.py             # Flask API entry point
-├── rag.py             # Core logic for ingestion & querying
-├── requirements.txt   # Python dependencies
-├── .env               # API keys (not tracked in git)
-└── README.md          # Project documentation
-📜 API Endpoints
-Method	Endpoint	Description
-POST	/ingest-pdf	Upload a PDF and store embeddings
-POST	/ingest-url	Ingest website content
-POST	/query	Ask a question to the knowledge DB
+├── app.py                 # Main Streamlit app
+├── requirements.txt       # Python dependencies
+├── .env                   # Environment variables (not committed to Git)
+├── README.md              # Project documentation
+├── data/                  # Folder for uploaded documents
+└── utils.py
+```
 
-🧠 How It Works
-Ingestion – The system extracts text from PDFs or URLs.
+---
 
-Embedding – Text is converted into vector embeddings using LangChain.
+## 🛠️ Installation
 
-Storage – FAISS stores these embeddings locally.
+1️⃣ **Clone the repository**
+```bash
+git clone https://github.com/<your-username>/groq-rag-app.git
+cd groq-rag-app
+```
 
-Querying – User queries are embedded and compared with stored vectors.
+2️⃣ **Create and activate a virtual environment**
+```bash
+python -m venv venv
+source venv/bin/activate       # Mac/Linux
+venv\Scripts\activate          # Windows
+```
 
-Answering – Groq LLM generates a contextual answer from the matched text.
+3️⃣ **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-🔮 Future Improvements
-Add support for DOCX ingestion
+4️⃣ **Set up environment variables**
 
-Deploy as a web app with file upload & chat UI
+Create a `.env` file in the root directory and add:
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
 
-Add multi-language support
+---
 
-Integration with Google Drive and Notion
+## ▶️ Running the App
 
-📄 License
-This project is licensed under the MIT License – feel free to use and modify it.
+```bash
+streamlit run app.py
+```
+
+Once running, open your browser at:
+```
+http://localhost:8501
+```
+
+---
+
+## 📖 How It Works
+
+1. **Load Documents** – PDF/Text files are loaded and split into chunks.
+2. **Embed Documents** – GROQ-compatible embeddings are generated and stored in a vector DB.
+3. **Retrieve Context** – Based on your query, relevant document chunks are retrieved.
+4. **Generate Answer** – GROQ LLM generates a contextual, accurate response.
+
+---
+
+## 📦 Dependencies
+
+- **Python** 3.9+
+- **LangChain**
+- **GROQ API**
+- **FAISS / Chroma**
+- **Streamlit**
+- **dotenv**
+
+Install them with:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Create a new branch (`feature/my-feature`)
+3. Commit changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Create a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 📧 Contact
+
+**Author:** Soyeb Ganja 
+**Email:** soyeb.ganja@gmail.com
+**Soyeb Ganja** - [LinkedIN Profile](https://linkedin.com/in/soyeb-ganja), [GitHub Profile](https://github.com/soyebganja)
+
+
