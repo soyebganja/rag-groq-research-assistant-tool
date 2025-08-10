@@ -43,19 +43,22 @@ This tool uses **GROQ LLM** with **LangChain** to provide **fast, accurate, and 
 ```bash
 git clone https://github.com/<your-username>/research-assistance-tool.git
 cd research-assistance-tool
-2️⃣ Create a virtual environment
+
+### 2️⃣ Create a virtual environment
 bash
 Copy
 Edit
 python -m venv venv
 source venv/bin/activate   # macOS/Linux
 venv\Scripts\activate      # Windows
-3️⃣ Install dependencies
+
+### 3️⃣ Install dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-4️⃣ Add your environment variables
+
+### 4️⃣ Add your environment variables
 Create a .env file in the root directory:
 
 ini
@@ -87,7 +90,7 @@ The system retrieves the most relevant chunks
 
 GROQ LLM generates a precise answer
 
-📸 Example
+### 📸 Example
 Question:
 
 What are the main findings from the latest AI research in the uploaded paper?
@@ -96,7 +99,7 @@ Answer:
 
 The study concludes that integrating multimodal models with self-corrective feedback significantly improves reasoning accuracy, particularly in open-ended problem-solving scenarios.
 
-🧭 Project Structure
+### 🧭 Project Structure
 bash
 Copy
 Edit
@@ -107,7 +110,8 @@ research-assistance-tool/
 ├── requirements.txt # Dependencies
 ├── .env.example     # Example env file
 └── README.md        # Documentation
-🔮 Future Enhancements
+
+### 🔮 Future Enhancements
 Multi-file batch ingestion
 
 Support for audio/video transcription
@@ -118,10 +122,10 @@ User authentication & role-based access
 
 Cloud-hosted vector store
 
-📜 License
+###  📜 License
 This project is licensed under the MIT License.
 
-💡 Acknowledgements
+### 💡 Acknowledgements
 LangChain
 
 FAISS
