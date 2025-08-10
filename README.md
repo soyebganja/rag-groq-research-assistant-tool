@@ -43,3 +43,98 @@ This tool uses **GROQ LLM** with **LangChain** to provide **fast, accurate, and 
 ```bash
 git clone https://github.com/<your-username>/research-assistance-tool.git
 cd research-assistance-tool
+2️⃣ Create a virtual environment
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate   # macOS/Linux
+venv\Scripts\activate      # Windows
+3️⃣ Install dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+4️⃣ Add your environment variables
+Create a .env file in the root directory:
+
+ini
+Copy
+Edit
+GROQ_API_KEY=your_groq_api_key_here
+▶️ Usage
+Start the Streamlit app
+bash
+Copy
+Edit
+streamlit run app.py
+Ingest a URL
+Paste the article/research paper URL into the input box
+
+Click Ingest
+
+Data is processed, chunked, and stored in FAISS
+
+Ingest a PDF
+Upload your PDF
+
+System extracts text, chunks it, and stores vectors
+
+Ask Questions
+Type your query in the input box
+
+The system retrieves the most relevant chunks
+
+GROQ LLM generates a precise answer
+
+📸 Example
+Question:
+
+What are the main findings from the latest AI research in the uploaded paper?
+
+Answer:
+
+The study concludes that integrating multimodal models with self-corrective feedback significantly improves reasoning accuracy, particularly in open-ended problem-solving scenarios.
+
+🧭 Project Structure
+bash
+Copy
+Edit
+research-assistance-tool/
+│
+├── app.py           # Streamlit UI
+├── rag.py           # Ingestion, storage, retrieval, Q&A
+├── requirements.txt # Dependencies
+├── .env.example     # Example env file
+└── README.md        # Documentation
+🔮 Future Enhancements
+Multi-file batch ingestion
+
+Support for audio/video transcription
+
+Integration with other LLMs (Claude, Gemini)
+
+User authentication & role-based access
+
+Cloud-hosted vector store
+
+📜 License
+This project is licensed under the MIT License.
+
+💡 Acknowledgements
+LangChain
+
+FAISS
+
+GROQ
+
+Streamlit
+
+yaml
+Copy
+Edit
+
+---
+
+If you want, I can also **add real usage screenshots and architecture diagram** to make your GitHub repo stand out.  
+I can prepare those next so your README looks professional.
