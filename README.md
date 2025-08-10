@@ -3,9 +3,9 @@
 A powerful **AI-powered Research Assistance Tool** that lets you **ingest URLs and PDFs, store them in a vector database, and query them using natural language**.  
 This tool uses **GROQ LLM** with **LangChain** to provide **fast, accurate, and context-aware responses**.
 
+**Live Demo Link**: [RAG-GROQ-Research-Assistant-Tool](https://rag-groq-research-assistant-tool-hvcyd5qpjwhsa2uki8yyo9.streamlit.app/)
 <img width="1284" height="690" alt="image" src="https://github.com/user-attachments/assets/0bbb0508-5942-447b-bdb7-9b2f10d89105" />
 
-**Live Demo Link**: [RAG-GROQ-Research-Assistant-Tool](https://rag-groq-research-assistant-tool-hvcyd5qpjwhsa2uki8yyo9.streamlit.app/)
 ---
 
 ## 🚀 Features
