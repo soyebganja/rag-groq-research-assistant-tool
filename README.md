@@ -138,8 +138,10 @@ This project is licensed under the MIT License.
 
 ## 📧 Contact
 
-**Author:** Soyeb Ganja 
+**Author:** Soyeb Ganja
+ 
 **Email:** soyeb.ganja@gmail.com
+
 **Soyeb Ganja** - [LinkedIN Profile](https://linkedin.com/in/soyeb-ganja), [GitHub Profile](https://github.com/soyebganja)
 
 
