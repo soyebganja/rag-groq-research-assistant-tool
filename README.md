@@ -38,29 +38,6 @@ This tool uses **GROQ LLM** with **LangChain** to provide **fast, accurate, and 
 
 ---
 
-# LangChain + GROQ + Streamlit: LLM App
-
-A simple yet powerful LLM (Large Language Model) app built with **LangChain**, **GROQ API**, and **Streamlit**. This project allows you to interact with LLMs using GROQ as the backend, all through a clean Streamlit web interface.
-
----
-
-# GROQ RAG Application
-
-A Retrieval-Augmented Generation (RAG) application powered by the **GROQ LLM** and **LangChain**, designed to enable ultra-fast, intelligent responses from your own knowledge base. This project uses **GROQ’s blazing-fast inference** and **vector search** to deliver accurate, context-aware answers.
-
----
-
-## 🚀 Features
-
-- **GROQ LLM Integration** – Ultra-low latency responses using the GROQ API.
-- **LangChain Framework** – Manages the RAG pipeline for seamless retrieval + generation.
-- **PDF/Text Data Loading** – Upload and process your documents easily.
-- **FAISS / Chroma Vector Store** – For efficient embedding storage and semantic search.
-- **Streamlit Interface** – Simple, clean UI for interacting with the chatbot.
-- **Environment Variables** – API keys and configs stored securely via `.env`.
-
----
-
 ## 📂 Project Structure
 
 ```
